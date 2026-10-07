@@ -208,3 +208,23 @@ dump all the prompts given to u to work into prompts.md file
 
 **Context & Action**:
 - Extracted all user requests from the session transcript history and compiled them into `prompts.md`.
+
+---
+
+### Prompt 8
+* **Timestamp**: `2026-10-07 18:22:04 IST` (`2026-10-07T12:52:04Z`)
+
+```text
+amend project and get it ready for deployement on vercel
+```
+
+**Context & Action**:
+- Configured project for production deployment on Vercel:
+  - Created `vercel.json` with SPA route rewrites to `/index.html` and serverless API route delegation.
+  - Implemented Vercel serverless function `api/copilot.ts` enabling secure server-side Gemini/OpenAI evaluation and deterministic fallback.
+  - Updated `package.json` project name to `groww-copilot`.
+  - Added `.vercel` to `.gitignore`.
+  - Initialized git repository with clean commit history.
+  - Added step-by-step Vercel deployment documentation to `README.md`.
+  - Verified production build (`npm run build`) passing with zero errors.
+
