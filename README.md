@@ -153,6 +153,38 @@ npm run lint
 
 ---
 
+## 🚀 Deploying to Vercel
+
+The project is pre-configured for seamless zero-config deployment on Vercel:
+
+### Option A: Via Vercel Web Dashboard (Git Push)
+1. Push this repository to GitHub, GitLab, or Bitbucket:
+   ```bash
+   git remote add origin <your-repo-url>
+   git branch -M main
+   git push -u origin main
+   ```
+2. Go to [vercel.com](https://vercel.com) and click **"Add New Project"**.
+3. Import your repository. Vercel automatically detects **Vite** settings:
+   - **Framework Preset**: `Vite`
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+4. *(Optional)* In **Environment Variables**, add:
+   - `GEMINI_API_KEY`: Your Google Gemini API key.
+   - `GEMINI_MODEL`: `gemini-2.0-flash` (optional, defaults to `gemini-2.0-flash`).
+5. Click **Deploy**.
+
+> **Note**: Even if no API keys are provided in Vercel settings, the app runs 100% reliably out of the box using its built-in deterministic financial reasoning engine.
+
+### Option B: Via Vercel CLI
+```bash
+npm i -g vercel
+vercel
+```
+Follow the prompts to link and deploy in seconds.
+
+---
+
 ## 🧪 Testing the Copilot Experience
 
 Try testing these primary user flows:
